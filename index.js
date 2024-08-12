@@ -78,21 +78,19 @@ async function solveSlider(page, src, container, slider, shift) {
   log(100 + shiftX);
   log(
     box.frame.x +
-      box.container.x -
-      (box.slider.x - box.container.x) +
+      box.container.x +
       Number(solve.x) +
       shiftX
   );
   await customDragIndrop(
     page,
-    box.frame.x + box.slider.x + 10,
-    box.frame.y + box.slider.y + 10,
+    box.frame.x + box.slider.x + (box.slider.width/2),
+    box.frame.y + box.slider.y + (box.slider.height/2),
     box.frame.x +
-      box.container.x -
-      (box.slider.x - box.container.x) +
+      box.container.x +
       Number(solve.x) +
       shiftX,
-    box.frame.y + box.slider.y + 10
+    box.frame.y + box.slider.y + (box.slider.height/2)
   );
 }
 module.exports.solveSlider = solveSlider;
