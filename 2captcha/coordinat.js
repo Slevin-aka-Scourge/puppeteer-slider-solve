@@ -42,10 +42,16 @@ class Solver {
     });
     if (res.status == 200) {
       const body = await res.json();
+      log("CREATE TASK")
       log(body);
       if (body?.errorId == 0 && body?.taskId) {
         return body?.taskId;
+      }else{
+        throw new Error(`${body.errorCode}\n${body.errorDescription}`)
       }
+    }else{
+      const err=await res.json();
+      log(err)
     }
   }
   async getResult(taskId) {
@@ -61,6 +67,7 @@ class Solver {
     });
     if (res.status == 200) {
       const body = await res.json();
+      log("GET RESULT")
       log(body);
       if (body.errorId == 0 && body.status == "processing") {
         await setTimeout(5000);
@@ -79,9 +86,11 @@ class Solver {
       throw new Error("2CAPTCHA API NOT WORK NOW");
     }
     const taskId = await this.createTask(body);
+    log("TASKID")
     log(taskId);
     if (taskId) {
       const solution = await this.getResult(taskId);
+      log("SOLUTION")
       log(solution);
       if (solution) {
         return { data: solution.coordinates, taskId: taskId };
