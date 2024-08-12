@@ -1,0 +1,47 @@
+{
+  "name": "puppeteer-slider-solve",
+  "version": "1.0.0",
+  "description": "slider captcha solution using puppeteer and 2captcha captcha solution service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/Slevin-aka-Scourge/anti-captcha-fix-taskid.git"
+	},
+  "keywords": [
+    "puppeteer",
+    "captcha",
+    "2captcha",
+    "captcha",
+    "recaptcha",
+    "hcaptcha",
+    "hcaptcha enterprise",
+    "hcaptcha rqdata",
+    "recaptchav2",
+    "recaptcha enterprise",
+    "funcaptcha",
+    "arkoselabs",
+    "geetest",
+    "turnstile",
+    "turnstile captcha",
+    "antigate",
+    "2captcha",
+    "decaptcher",
+    "deathbycaptcha",
+    "cloudflare",
+    "cloudflare bypass",
+    "datadome",
+    "datadome bypass",
+    "object coordinates"
+    
+  ],
+  "author": "Slevin-aka-Scourge <https://t.me/AvaScourge>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "node-fetch": "^2.7.0"
+  }
+}
