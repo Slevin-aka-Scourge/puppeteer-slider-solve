@@ -30,7 +30,6 @@ async function auth() {
       waitUntil: "networkidle2",
       timeout: 30000,
     });
-    await recorder.start(`./test.mp4`);
     if (type === 1) {
       await page.waitForSelector(".geetest_wait", {
         timeout: 25000,
