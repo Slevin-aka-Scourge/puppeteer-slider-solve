@@ -7,7 +7,7 @@ import { PuppeteerScreenRecorder } from "puppeteer-screen-recorder";
 puppeteer.use(StealthPlugin());
 const HEADLESS = "new"; // HEADLESS BROWSER
 const type = 0;
-async function auth() {
+async function test() {
   let browser;
   let recorder;
   try {
@@ -15,8 +15,7 @@ async function auth() {
       args: ["--start-maximized", "--no-first-run"],
       headless: HEADLESS,
       executablePath: executablePath(),
-
-      slowMo: 150,
+      slowMo: 100,
     });
     const [page] = await browser.pages();
     recorder = new PuppeteerScreenRecorder(page);
@@ -76,4 +75,4 @@ async function auth() {
     }
   }
 }
-auth();
+test();
