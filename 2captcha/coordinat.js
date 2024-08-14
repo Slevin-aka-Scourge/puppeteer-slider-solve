@@ -35,7 +35,7 @@ class Solver {
       },
       body: JSON.stringify({
         clientKey: this.token,
-        softId: 1,
+        softId: 4689,
         task: body,
       }),
       method: "POST",
