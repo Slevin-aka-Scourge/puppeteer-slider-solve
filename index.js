@@ -76,21 +76,13 @@ async function solveSlider(page, src, container, slider, shift) {
   const solve = await solve2Captcha();
   log(solve);
   log(100 + shiftX);
-  log(
-    box.frame.x +
-      box.container.x +
-      Number(solve.x) +
-      shiftX
-  );
+  log(box.container.x + Number(solve.x) + shiftX);
   await customDragIndrop(
     page,
-    box.frame.x + box.slider.x + (box.slider.width/2),
-    box.frame.y + box.slider.y + (box.slider.height/2),
-    box.frame.x +
-      box.container.x +
-      Number(solve.x) +
-      shiftX,
-    box.frame.y + box.slider.y + (box.slider.height/2)
+    box.slider.x + box.slider.width / 2,
+    box.slider.y + box.slider.height / 2,
+    box.container.x + Number(solve.x) + shiftX,
+    box.slider.y + box.slider.height / 2
   );
 }
 module.exports.solveSlider = solveSlider;

@@ -36,6 +36,9 @@ Supported options field are listed below.
 
 ### Full Example
 ```js
+import puppeteer from "puppeteer";
+import { solveSlider } from "puppeteer-slider-solve";
+
 (async () => {
   const browser = await puppeteer.launch({
     args: ["--start-maximized"],
